@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SunTour</title>
+    <link rel="preload" href="images/main-bg.jpg" as="image">
+    <link rel="preload" href="css/style.min.css" as="style">
+    <link rel="preload" href="js/main.js" as="script">
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <!-- critical styles -->
+    <style>
+        @font-face {
+            font-family: "TrebuchetMS";
+            src: url("fonts/TrebuchetMS.woff2") format("woff2");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "TrebuchetMS-Bold";
+            src: url("fonts/TrebuchetMS-Bold.woff2") format("woff2");
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "DMSans";
+            src: url("fonts/DMSans-Regular.woff2") format("woff2");
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        @font-face {
+            font-family: "DMSans-Bold";
+            src: url("fonts/TrebuchetMS.woff2") format("woff2");
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="burger" aria-label="burger-menu">
+        <span class="burger__line"></span>
+    </button>
+    <header class="header">
+        <div class="container">
+            <nav class="header__nav">
+                <a class="header__logo" href="#">
+                    <img src="images/logo.svg" alt="logo">
+                </a>
+                <ul class="header__nav-menu">
+                    <li class="header__nav-name">
+                        Мережа турагенств<br>
+                        Сонце в колі
+                    </li>
+                    <li class="header__nav-phone">
+                        <a class="header__phone-number" href="tel:+0441234567">044 123-45-67</a>
+                        <p class="header__phone-text">зворотній дзвінок</p>
+                    </li>
+                    <li class="header__nav-socials">
+                        <a class="header__socials-link" href="http://facebook.com/">
+                            <img src="images/facebook-header.svg" width="32" height="32" alt="facebook">
+                        </a>
+                        <a class="header__socials-link" href="https://web.telegram.org/">
+                            <img src="images/telegram-header.svg" width="32" height="32" alt="telegram">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hotel">
+            <div class="container">
+                <div class="hotel__img-box">
+                    <img class="hotel__img" src="images/main-bg.jpg" width="1010" height="537" alt="">
+                    <div class="hotel__img-circle">
+                        <p class="hotel__img-location">Тур<br>у Созопль,<br> Болгарія</p>
+                        <p class="hotel__img-text">Код туру</p>
+                        <p class="hotel__img-code">3094119</p>
+                    </div>
+                </div>
+                <div class="hotel__wrapper">
+                    <div class="hotel__content">
+                        <div class="hotel__inner">
+                            <h1 class="hotel__name">Aquamarine hotel</h1>
+                            <div class="hotel__star-rating">
+                                <span class="star active" data-value="1"></span>
+                                <span class="star active" data-value="2"></span>
+                                <span class="star active" data-value="3"></span>
+                                <span class="star" data-value="4"></span>
+                                <span class="star" data-value="5"></span>
+                            </div>
+                            <p class="hotel__price">&dollar;256</p>
+                        </div>
+                        <ul class="hotel__reviews">
+                            <li class="hotel__reviews-count">Оцінка готелю<br><b>45 відгуків</b></li>
+                            <li class="hotel__reviews-score">8,4</li>
+                            <li class="hotel__reviews-room">Номер<br><span class="hotel__reviews-mark">8,9</span></li>
+                            <li class="hotel__reviews-food">Харчування<br><span class="hotel__reviews-mark">8,1</span>
+                            </li>
+                            <li class="hotel__reviews-service">Сервіс<br><span class="hotel__reviews-mark">7,9</span>
+                            </li>
+                            <li class="hotel__reviews-infrastructure">Інфраструктура<br><span
+                                    class="hotel__reviews-mark">8,9</span></li>
+                        </ul>
+                    </div>
+                    <div class="hotel__sunDays">
+                        <p class="hotel__sunDays-number">320</p>
+                        <span class="hotel__sunDays-text">сонячних<br> днів на рік</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="tours">
+            <div class="container">
+                <div class="tours__items">
+                    <div class="tours__item">
+                        <img src="images/tour-1.png" loading="lazy" width="500" height="280" alt="">
+                        <div class="tours__item-inner">
+                            <h2 class="tours__item-title">Шовковий шлях</h2>
+                            <p class="tours__item-price">&dollar;158</p>
+                        </div>
+                        <p class="tours__item-description">Екстремальний маршрут</p>
+                    </div>
+                    <div class="tours__item">
+                        <img src="images/tour-2.png" loading="lazy" width="500" height="280" alt="">
+                        <div class="tours__item-inner">
+                            <h2 class="tours__item-title">Роупджампінг</h2>
+                            <p class="tours__item-price tours__item-price--2">&dollar;57<span class="tours__item-discount">&dollar;90</span></p>
+                        </div>
+                        <p class="tours__item-description">Не дай Боже не любиш</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="promocode">
+            <div class="container">
+                <div class="promocode__wrapper">
+                    <div class="promocode__inner">
+                        <h2 class="promocode__title">Промокод</h2>
+                        <p class="promocode__quantity"> &dollar; 75<br><span>Знижка</span></p>
+                        <p class="promocode__text">
+                            Знижка &dollar75 готівкою при проживанні від 10 ночей
+                        </p>
+                        <p class="promocode__users">29 користувачів використали промокод</p>
+                    </div>
+                    <button class="promocode__button">Отримати </button>
+                </div>
+            </div>
+            <div class="promocode__more">
+                <p class="promocode__more-text">Дивіться подробиці</p>
+                <p class="promocode__more-details">
+                    Якщо ви плануєте тривале перебування в цьому регіоні, у нас є для вас чудова новина! Протягом
+                    обмеженого часу ми пропонуємо щедру знижку $75 готівкою на проживання в нашому готелі від 10
+                    ночей. Саме так - лише за те, що ви вирішили зупинитися у нас на тривалий період, ви можете
+                    суттєво заощадити на проживанні.
+
+                    У нашому готелі ми пишаємося тим, що надаємо першокласні зручності та комфортні, стильні номери,
+                    які ідеально підходять для довгострокового проживання. Незалежно від того, приїхали ви сюди для
+                    роботи чи відпочинку, вам сподобається наш фітнес-центр, спа-центр і ресторан, а також наше
+                    зручне розташування поруч з усіма найкращими місцевими визначними пам'ятками.
+
+                    Але що найкраще? З нашою ексклюзивною знижкою готівкою ви зможете насолоджуватися всім цим і
+                    навіть більше за невелику частину ціни. Це наш спосіб сказати "дякую" за те, що ви вирішили
+                    зупинитися у нас, і ми не можемо дочекатися, щоб привітати вас у нашому готелі.
+
+                    То чого ж ви чекаєте? Забронюйте 10-денне перебування у нас сьогодні і почніть планувати свою
+                    ідеальну подорож. З нашим неперевершеним поєднанням якості, доступності та зручності ви не
+                    знайдете кращої пропозиції ніде. Ми з нетерпінням чекаємо, щоб ваше перебування у нас стало
+                    незабутнім!
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <script defer src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,382 @@
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "libs";
+@import "functions";
+@import "global";
+
+.burger {
+    display: none;
+    position: fixed;
+    top: 37px;
+    right: 15px;
+    z-index: 999;
+    color: var(--burger);
+    border: none;
+    outline: none;
+    background-color: transparent;
+    width: 30px;
+    height: 20px;
+    cursor: pointer;
+    &__line {
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: 2px;
+        background-color: currentColor;
+        transition: transform 0.3s ease-in-out;
+    }
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--burger);
+        transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
+    &::before {
+        top: 0;
+    }
+    &::after {
+        top: calc(100% - 2px);
+    }
+}
+
+.header {
+    background-color: var(--blue);
+    padding: 30px 0;
+    &__logo {
+        padding-right: 22px;
+    }
+    &__nav {
+        display: flex;
+        justify-content: start;
+        // flex-wrap: wrap;
+    }
+    &__nav-menu {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 10px;
+        color: var(--white);
+    }
+    &__nav-name {
+        font-size: 16px;
+        line-height: 18px;
+    }
+    &__nav-phone {
+        display: flex;
+        align-items: center;
+    }
+    &__phone-number {
+        font-size: 30px;
+        line-height: 34px;
+        margin-right: 8px;
+    }
+    &__phone-text {
+        font-size: 16px;
+        line-height: 18px;
+    }
+
+    &__nav-socials {
+    }
+    &__socials-link:not(:last-child) {
+        margin-right: 15px;
+    }
+}
+
+.hotel {
+    padding-top: 25px;
+    &__img-box {
+        position: relative;
+    }
+    &__img-circle {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 250px;
+        height: 250px;
+        background: rgba(255, 242, 0, 0.7);
+        border-radius: 100%;
+        left: 32px;
+        bottom: 33px;
+    }
+    &__img-location {
+        font-family: "TrebuchetMS-Bold";
+        font-size: 25px;
+        line-height: 29px;
+        margin-bottom: 16px;
+    }
+    &__img-text {
+        font-family: "TrebuchetMS-Bold";
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+        margin-bottom: 7px;
+    }
+    &__img-code {
+        font-family: "TrebuchetMS-Bold";
+        padding: 6px 5px;
+        background: var(--black);
+        color: var(--white);
+        font-size: 24px;
+        line-height: 28px;
+    }
+    &__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+    &__content {
+        display: flex;
+        flex-direction: column;
+        max-width: 650px;
+        width: 100%;
+    }
+    &__inner {
+        display: inline-flex;
+        flex-direction: row;
+        justify-content: space-between;
+        // flex-wrap: wrap;
+        max-width: 560px;
+        width: 100%;
+        padding-top: 23px;
+    }
+    &__name {
+        font-family: "TrebuchetMS-Bold";
+        font-size: 35px;
+        line-height: 130%;
+        width: fit-content;
+        height: fit-content;
+        border-bottom: 1px solid #bfbebe;
+    }
+    &__star-rating {
+        padding-top: 10px;
+    }
+    .star {
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        background-image: url("../images/star.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+    }
+    .star:hover,
+    .star.active {
+        background-image: url("../images/star-active.svg");
+    }
+    &__price {
+        font-family: "TrebuchetMS-Bold";
+        font-size: 35px;
+        line-height: 130%;
+    }
+    &__sunDays {
+        display: inline-flex;
+        max-width: 250px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        transform: translateY(-30px);
+    }
+    &__sunDays-number {
+        color: #777777;
+        font-size: 88px;
+        line-height: 92px;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    &__sunDays-text {
+        font-family: "Arial";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 30px;
+        line-height: 31px;
+    }
+    &__reviews {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 27px;
+    }
+    &__reviews-count {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    &__reviews-score {
+        width: 52px;
+        height: 52px;
+        font-family: "TrebuchetMS-Bold";
+        color: var(--white);
+        font-size: 24px;
+        line-height: 28px;
+        padding: 12px 8px;
+        background: #008baa;
+    }
+    &__reviews-room {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+    &__reviews-food {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+    &__reviews-service {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+    &__reviews-infrastructure {
+        font-size: 12px;
+        line-height: 14px;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+    &__reviews-mark {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.05em;
+    }
+}
+
+.tours {
+    padding-top: 50px;
+    &__items {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(365px, 1fr));
+        gap: 40px;
+    }
+    &__item-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+    &__item-title {
+        font-family: "TrebuchetMS-Bold";
+        font-size: 35px;
+        line-height: 130%;
+        border-bottom: 1px solid #bfbebe;
+        width: fit-content;
+        cursor: pointer;
+        &:hover {
+            color: #cb0000;
+            border-bottom: 1px solid #cb0000;
+            transition: all 0.5s;
+        }
+    }
+
+    &__item-price {
+        font-family: "TrebuchetMS-Bold";
+        font-size: 35px;
+        line-height: 130%;
+    }
+    &__item-price--2 {
+        position: absolute;
+        top: 0;
+        right: 7px;
+    }
+    &__item-description {
+        font-size: 14px;
+        line-height: 19px;
+    }
+    &__item-discount {
+        display: block;
+        font-family: "TrebuchetMS";
+        color: #777777;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: right;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 12px;
+            right: 0;
+            width: 30px;
+            height: 2px;
+            background-color: #777777;
+        }
+    }
+}
+.tours__item-title:hover + .tours__item-price .tours__item-discount::before{
+    background: #cb0000;
+}
+.promocode {
+    padding-top: 35px;
+    .container {
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+    }
+    &__more {
+        max-width: 1040px;
+        margin: 0 auto;
+        padding: 15px 0;
+        width: 100%;
+        background: #f7f7f7;
+        padding: 15px 0;
+        cursor: pointer;
+        position: relative;
+        border: 1px solid #e0e0e0;
+        border-radius: 6px;
+        border-top: none;
+    }
+    &__more-details {
+        position: absolute;
+        overflow: hidden;
+        transition: 0.5s;
+        font-size: 15px;
+        line-height: 18px;
+        width: 100%;
+        height: 0;
+        left: 0;
+        margin-top: 15px;
+    }
+    &__more-text {
+        padding-right: 15px;
+        text-align: center;
+        position: relative;
+        &::after {
+            content: "";
+            background: url("../images/Vector.svg");
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 14px;
+            height: 8px;
+            transform: translateY(-50%);
+        }
+    }
+
+    &__more.active {
+        .promocode__more-details {
+            height: fit-content;
+            // background-color: #111111;
+            padding: 15px 0;
+            background: #f7f7f7;
+            z-index: -1;
+        }
+        .promocode__more-text {
+            &::after {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
+@import "media";
